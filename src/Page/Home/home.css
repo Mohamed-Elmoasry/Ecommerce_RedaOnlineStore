@@ -1,0 +1,74 @@
+:root {
+    --main_color: #0090f0;
+    --p_color: #7b7b7b;
+    --bg_color: #F3F3F3;
+    --white_color: #FFF;
+    --color_heading: #253237;
+    --border_color: #d6d6d6d5;
+}
+
+.hero {
+    position: relative;
+    margin-bottom: 80px;
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8%;
+}
+
+.hero .content h4 {
+    text-transform: uppercase;
+    font-size: 1vw;
+    font-style: italic;
+    margin-bottom: 0.4vw;
+}
+
+.hero .content h3 {
+    font-size: 3vw;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: bolder;
+    color: var(--main_color);
+    line-height: 1.1;
+}
+
+.hero .content p {
+    font-size: 1.1vw;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
